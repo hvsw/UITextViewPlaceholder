@@ -20,12 +20,13 @@ class ViewController: UIViewController {
         /// I guess the expected behavior should be that the last one set should
         /// persist and clear the other.
         self.textView?.placeholder = placeholderText
+        self.textView?.placeholderColor = UIColor.blue.withAlphaComponent(0.3)
         
         self.textView.text = ""
         
         let placeholderAttributes: [NSAttributedString.Key : Any] = [
-            .font:UIFont.systemFont(ofSize: 30),
-            .foregroundColor:UIColor.red,
+            .font:UIFont.systemFont(ofSize: 15), // a little bit larger than default to make easier to notice
+            .foregroundColor:UIColor.red.withAlphaComponent(0.3),
         ]
         self.textView?.attributedPlaceholder = NSAttributedString(string: self.textView?.placeholder ?? "",
                                                                   attributes: placeholderAttributes)
