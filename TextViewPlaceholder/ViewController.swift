@@ -17,6 +17,8 @@ class ViewController: UIViewController {
         let placeholderText = "placeholder text"
         
         /// Looks like I can't set the placecholder AND the attributedPlaceholder
+        /// I guess the expected behavior should be that the last one set should
+        /// persist and clear the other.
         self.textView?.placeholder = placeholderText
         
         self.textView.text = ""
